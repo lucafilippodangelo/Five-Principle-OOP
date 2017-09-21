@@ -49,9 +49,10 @@ I will convert the methods in separated interfaces that give services and specia
 Smell of abstraction! For the “order” I see that there are different types of order itself, so something enumerable, so I can create three different classes per type of order and inherit from the right one that is ABSTRACT. I will avoid to create "IF" when I have to do different actions related with different type of objects.
 
 RIGHT APPROACH - SECOND STEP
+
 So the second step is make the class “Order” Abstract and implement three concrete classes
--
-Abstract class “order” with virtual method “Checkout()”
+
+- Abstract class “order” with virtual method “Checkout()”
 
 - onlineOrder : order
 - - Checkout method
@@ -64,3 +65,5 @@ Abstract class “order” with virtual method “Checkout()”
 - - - PaymentProcessor
 
 - PoSCashOrder : Order
+
+## OPEN/CLOSE PRINCIPLE(OCP) ##
