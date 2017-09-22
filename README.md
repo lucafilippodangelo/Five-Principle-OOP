@@ -67,3 +67,57 @@ So the second step is make the class “Order” Abstract and implement three concre
 - PoSCashOrder : Order
 
 ## OPEN/CLOSE PRINCIPLE(OCP) ##
+Is important learn how to avoid if/else and migrate to abstraction.
+Definition: classes, modules, functions should be open to extensions but closed to modifications
+- OPEN TO EXTENSIONS, new behaviour can be added in the future
+- CLOSE TO MODIFICATION, changes to source or binary code are not required, so we shoudln't recompile existing code
+
+the scenario is the method “TotalAmount()” of the class “Cart.cs”. 
+
+WRONG IMPLEMENTATION
+The focus is in the conditional logic within this method. The price logic depend on “order item” feature and for sure "cart" class is not just doing the "cart" functionality, but the "Price calculation functionality" as well!
+
+public decimal TotalAmount()
+  {
+      decimal total = 0m;
+      foreach (OrderItem orderItem in Items)
+      {
+          if (orderItem.Sku.StartsWith("EACH"))
+          {
+              total += orderItem.Quantity*5m;
+          }
+          else if (orderItem.Sku.StartsWith("WEIGHT"))
+          {
+              // quantity is in grams, price is per kg
+              total += orderItem.Quantity*4m/1000;
+          }
+          else if (orderItem.Sku.StartsWith("SPECIAL"))
+          {
+              // $0.40 each; 3 for a $1.00
+              total += orderItem.Quantity*.4m;
+              int setsOfThree = orderItem.Quantity/3;
+              total -= setsOfThree*.2m;
+          }
+          // more rules are coming!
+      }
+      return total;
+  }
+
+The goal is to study a solution in order to don’t update the class any time a new condition in if/else change. 
+Remember that in the example for the “Single Responsability Principle” the logic was executing different subset of actions depending on the specific combinations of input parameters. In the “Open Close Principle” example, the logic in  “TotalAmount()” execute the same action, with the same return type but with different logic inside.
+The best approach is add new classes any time a new condition come, less likely new problems will be introduced because:
+- nothing depend on the new classes
+- easy to test because not coupled
+
+There are three approaches to achieve OCP
+- parameters (set a a status of a class by attribute)
+- inheritance with the "Template method PATTERN"
+- composition with the "Startegy PATTERN"
+
+RIGHT IMPLEMENTATION
+In the new implementation I used the STRATEGY PATTERN that use COMPOSITION.
+The client code depends on the abstraction “IPricingCalculator”, we don’t know which price rule logic calculation concrete class we are going to call, we just pass an object “orderItem”, then depend on the specific attribute in the “OrderItem”, inside the “CalculatePrice” Method of “PricingCalculator.cs” we will call the concrete implementation of one of the class that manage each of the “PriceCalculation” logic we had inside “if”.
+There are comments In the code starting from the “Cart.cs” class:
+-	//LD STEP1
+-	//LD STEP2
+-	//LD STEP3
