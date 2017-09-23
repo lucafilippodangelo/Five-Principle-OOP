@@ -10,8 +10,7 @@ EXAMPLE WRONG APPROACH
 I start the example by just considering the class “Order”, all the business logic to process an order is in it.
 public class Order
 
-'''
-
+```
         public void Checkout(Cart cart, PaymentDetails paymentDetails, bool notifyCustomer)
         {
             if (paymentDetails.PaymentMethod == PaymentMethod.CreditCard)
@@ -32,8 +31,7 @@ public class Order
         public void ReserveInventory(Cart cart) {}
 
         public void ChargeCard(PaymentDetails paymentDetails, Cart cart) {}
-
-'''
+```
 
 - The Class Order
   - Has method “Checkout” that under condition call 
@@ -80,8 +78,7 @@ the scenario is the method “TotalAmount()” of the class “Cart.cs”.
 WRONG IMPLEMENTATION
 The focus is in the conditional logic within this method. The price logic depend on “order item” feature and for sure "cart" class is not just doing the "cart" functionality, but the "Price calculation functionality" as well!
 
-'''
-
+```
 public decimal TotalAmount()
   {
       decimal total = 0m;
@@ -107,8 +104,7 @@ public decimal TotalAmount()
       }
       return total;
   }
-
-'''
+```
 
 The goal is to study a solution in order to don’t update the class any time a new condition in if/else change. 
 Remember that in the example for the “Single Responsability Principle” the logic was executing different subset of actions depending on the specific combinations of input parameters. In the “Open Close Principle” example, the logic in  “TotalAmount()” execute the same action, with the same return type but with different logic inside.
@@ -128,3 +124,5 @@ There are comments In the code starting from the “Cart.cs” class:
 -	//LD STEP1
 -	//LD STEP2
 -	//LD STEP3
+
+## THE LISKOV SUBSTITUTION PRINCIPLE ##
