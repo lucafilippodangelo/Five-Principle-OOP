@@ -11,6 +11,7 @@ I start the example by just considering the class “Order”, all the business logi
 public class Order
 
 '''
+
         public void Checkout(Cart cart, PaymentDetails paymentDetails, bool notifyCustomer)
         {
             if (paymentDetails.PaymentMethod == PaymentMethod.CreditCard)
@@ -31,6 +32,7 @@ public class Order
         public void ReserveInventory(Cart cart) {}
 
         public void ChargeCard(PaymentDetails paymentDetails, Cart cart) {}
+
 '''
 
 - The Class Order
@@ -79,6 +81,7 @@ WRONG IMPLEMENTATION
 The focus is in the conditional logic within this method. The price logic depend on “order item” feature and for sure "cart" class is not just doing the "cart" functionality, but the "Price calculation functionality" as well!
 
 '''
+
 public decimal TotalAmount()
   {
       decimal total = 0m;
@@ -104,6 +107,7 @@ public decimal TotalAmount()
       }
       return total;
   }
+
 '''
 
 The goal is to study a solution in order to don’t update the class any time a new condition in if/else change. 
