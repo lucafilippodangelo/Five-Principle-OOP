@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FivePrincipleOOPOpenClosePrinciple.Models
+namespace OpenClosePrinciple.Models
 {
     public class OrderItem
     {

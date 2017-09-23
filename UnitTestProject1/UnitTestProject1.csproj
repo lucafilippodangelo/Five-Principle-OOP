@@ -11,7 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FivePrincipleOOPOpenClosePrinciple\FivePrincipleOOPOpenClosePrinciple.csproj" />
+    <ProjectReference Include="..\OpenClosePrinciple\OpenClosePrinciple.csproj" />
+    <ProjectReference Include="..\SingleResponsabilityPrinciple\SingleResponsabilityPrinciple.csproj" />
+    <ProjectReference Include="..\TheLiskovSubstitutionPrinciple\TheLiskovSubstitutionPrinciple.csproj" />
   </ItemGroup>
 
   <ItemGroup>

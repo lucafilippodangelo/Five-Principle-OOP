@@ -1,9 +1,9 @@
 ﻿
 
-using FivePrincipleOOPOpenClosePrinciple.Models;
+using OpenClosePrinciple.Models;
 using System;
 
-namespace FivePrincipleOOPOpenClosePrinciple
+namespace OpenClosePrinciple
 {
     class Program
     {

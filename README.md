@@ -121,8 +121,11 @@ RIGHT IMPLEMENTATION
 In the new implementation I used the STRATEGY PATTERN that use COMPOSITION.
 The client code depends on the abstraction “IPricingCalculator”, we don’t know which price rule logic calculation concrete class we are going to call, we just pass an object “orderItem”, then depend on the specific attribute in the “OrderItem”, inside the “CalculatePrice” Method of “PricingCalculator.cs” we will call the concrete implementation of one of the class that manage each of the “PriceCalculation” logic we had inside “if”.
 There are comments In the code starting from the “Cart.cs” class:
--	//LD STEP1
--	//LD STEP2
--	//LD STEP3
+-	//LD STEP1, //LD STEP2,	//LD STEP3
 
 ## THE LISKOV SUBSTITUTION PRINCIPLE ##
+
+This princple says that subtypes must be substitutable for their base types. The child class should not:
+- remove base class behaviour
+- violate base class invariants(behaviour that doesn't change defined by contract sometimes)
+

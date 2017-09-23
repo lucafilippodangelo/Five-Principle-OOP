@@ -1,10 +1,10 @@
-﻿using FivePrincipleOOPOpenClosePrinciple.Interfaces;
-using FivePrincipleOOPOpenClosePrinciple.Models;
+﻿using OpenClosePrinciple.Interfaces;
+using OpenClosePrinciple.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace FivePrincipleOOPOpenClosePrinciple.InterfaceImplementation
+namespace OpenClosePrinciple.InterfaceImplementation
 {
     public class PerGramPriceRule : IPriceRule
     {

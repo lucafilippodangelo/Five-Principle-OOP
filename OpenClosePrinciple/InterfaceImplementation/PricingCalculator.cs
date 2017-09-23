@@ -1,11 +1,11 @@
-﻿using FivePrincipleOOPOpenClosePrinciple.Interfaces;
-using FivePrincipleOOPOpenClosePrinciple.Models;
+﻿using OpenClosePrinciple.Interfaces;
+using OpenClosePrinciple.Models;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using System;
 
-namespace FivePrincipleOOPOpenClosePrinciple.InterfaceImplementation
+namespace OpenClosePrinciple.InterfaceImplementation
 {
     public class PricingCalculator : IPricingCalculator
     {

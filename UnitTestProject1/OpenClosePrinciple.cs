@@ -1,18 +1,17 @@
-using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using FivePrincipleOOPOpenClosePrinciple.Models;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenClosePrinciple.Models;
 
-namespace UnitTestProject
+namespace UnitTestProject1
 {
     [TestClass]
-    public class OpenClosePrincipleTests
+    public class OpenClosePrinciple
     {
-        private FivePrincipleOOPOpenClosePrinciple.Models.Cart _cart;
+        private Cart _cart;
 
         [TestInitialize]
         public void Setup()
         {
-            _cart = new FivePrincipleOOPOpenClosePrinciple.Models.Cart();
+            _cart = new Cart();
         }
 
         [TestMethod]
@@ -59,5 +58,6 @@ namespace UnitTestProject
             _cart.Add(new OrderItem() { Quantity = 5, Sku = "B4GO_APPLE" });
             Assert.AreEqual(4m, _cart.TotalAmount());
         }
+
     }
 }

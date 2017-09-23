@@ -1,10 +1,8 @@
-﻿using FivePrincipleOOPOpenClosePrinciple.InterfaceImplementation;
-using FivePrincipleOOPOpenClosePrinciple.Interfaces;
-using System;
+﻿using OpenClosePrinciple.InterfaceImplementation;
+using OpenClosePrinciple.Interfaces;
 using System.Collections.Generic;
-using System.Text;
 
-namespace FivePrincipleOOPOpenClosePrinciple.Models
+namespace OpenClosePrinciple.Models
 {
     public class Cart
     {

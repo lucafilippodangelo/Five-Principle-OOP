@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using FivePrincipleOOPOpenClosePrinciple.Models;
+using OpenClosePrinciple.Models;
 
-namespace FivePrincipleOOPOpenClosePrinciple.Interfaces
+namespace OpenClosePrinciple.Interfaces
 {
     public interface IPriceRule
     {
