@@ -2,8 +2,8 @@ This project to exercise the OOP SOLID principles
 
 ## SINGLE RESPONSABILITY PRINCIPLE ##
 - Every Object has to have a single responsibility, and that responsibility has to be encapsulated by a class.
-- - Any class has to have members/methods that manage instances of that specific class type. 
-- - From a class is good approach delegate other classes to change status of other objects.
+  - Any class has to have members/methods that manage instances of that specific class type. 
+  - From a class is good approach delegate other classes to change status of other objects.
 - Any method has to do just an action for the instance.
 
 EXAMPLE WRONG APPROACH 
@@ -36,10 +36,10 @@ public class Order
 '''
 
 - The Class Order
-- - Has method “Checkout” that under condition call 
-- - - The method “Charge card”
-- - - The method “Reserve Inventory”
-- - - The method “Notify Customer”
+  - Has method “Checkout” that under condition call 
+    - The method “Charge card”
+    - The method “Reserve Inventory”
+    - The method “Notify Customer”
 
 
 RIGHT APPROACH - FIRST STEP
@@ -58,14 +58,14 @@ So the second step is make the class “Order” Abstract and implement three concre
 - Abstract class “order” with virtual method “Checkout()”
 
 - onlineOrder : order
-- - Checkout method
-- - - PaymentProcessor
-- - - ReservationService
-- - - NotificationService
+  - Checkout method
+    - PaymentProcessor
+    - ReservationService
+    - NotificationService
 	
 - PoSCreditOrder : order
-- - Checkout method
-- - - PaymentProcessor
+  - Checkout method
+    - PaymentProcessor
 
 - PoSCashOrder : Order
 
