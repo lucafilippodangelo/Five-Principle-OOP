@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FivePrincipleOOPSingleResponsabilityPrinciple", "FivePrincipleOOPSingleResponsabilityPrinciple.csproj", "{551F2756-0CE6-488C-9C87-2BA558DF77C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FivePrincipleOOPSingleResponsabilityPrinciple", "FivePrincipleOOPSingleResponsabilityPrinciple.csproj", "{551F2756-0CE6-488C-9C87-2BA558DF77C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FivePrincipleOOPOpenClosePrinciple", "..\FivePrincipleOOPOpenClosePrinciple\FivePrincipleOOPOpenClosePrinciple.csproj", "{778A2F36-350A-4A5E-BD72-C87A28D80FAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FivePrincipleOOPOpenClosePrinciple", "..\FivePrincipleOOPOpenClosePrinciple\FivePrincipleOOPOpenClosePrinciple.csproj", "{778A2F36-350A-4A5E-BD72-C87A28D80FAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
