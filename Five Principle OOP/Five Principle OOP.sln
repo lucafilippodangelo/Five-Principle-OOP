@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FivePrincipleOOPOpenClosePr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FivePrincipleOOPSingleResponsabilityPrinciple", "..\FivePrincipleOOPSingleResponsabilityPrinciple\FivePrincipleOOPSingleResponsabilityPrinciple.csproj", "{670EC4C7-ED83-4DC7-9F28-5EB75C71DC6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTests", "..\NUnitTests\NUnitTests.csproj", "{4E4DBDFD-2593-4113-B43F-FBB66B4B2841}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestsProject", "TestsProject\TestsProject.csproj", "{FCF7577B-FF86-4ECE-93F0-E2B789DFC7BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{670EC4C7-ED83-4DC7-9F28-5EB75C71DC6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{670EC4C7-ED83-4DC7-9F28-5EB75C71DC6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{670EC4C7-ED83-4DC7-9F28-5EB75C71DC6F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4E4DBDFD-2593-4113-B43F-FBB66B4B2841}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4E4DBDFD-2593-4113-B43F-FBB66B4B2841}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4E4DBDFD-2593-4113-B43F-FBB66B4B2841}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4E4DBDFD-2593-4113-B43F-FBB66B4B2841}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCF7577B-FF86-4ECE-93F0-E2B789DFC7BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCF7577B-FF86-4ECE-93F0-E2B789DFC7BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCF7577B-FF86-4ECE-93F0-E2B789DFC7BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCF7577B-FF86-4ECE-93F0-E2B789DFC7BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
