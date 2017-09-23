@@ -1,6 +1,4 @@
-# FivePrincipleOOPTests
-
-## SINGLE RESPONSABILITY PRINCIPLE ##
+# SINGLE RESPONSABILITY PRINCIPLE 
 - Every Object has to have a single responsibility, and that responsibility has to be encapsulated by a class.
 - - Any class has to have members/methods that manage instances of that specific class type. 
 - - From a class is good approach delegate other classes to change status of other objects.
@@ -9,6 +7,7 @@
 EXAMPLE WRONG APPROACH 
 I start the example by just considering the class “Order”, all the business logic to process an order is in it.
 public class Order
+'''
     {
         public void Checkout(Cart cart, PaymentDetails paymentDetails, bool notifyCustomer)
         {
@@ -31,6 +30,7 @@ public class Order
 
         public void ChargeCard(PaymentDetails paymentDetails, Cart cart) {}
     }
+'''
 
 - The Class Order
 - - Has method “Checkout” that under condition call 
