@@ -1,5 +1,4 @@
-﻿using FivePrincipleOOP.Models;
-using FivePrincipleOOPOpenClosePrinciple.InterfaceImplementation;
+﻿using FivePrincipleOOPOpenClosePrinciple.InterfaceImplementation;
 using FivePrincipleOOPOpenClosePrinciple.Interfaces;
 using System;
 using System.Collections.Generic;

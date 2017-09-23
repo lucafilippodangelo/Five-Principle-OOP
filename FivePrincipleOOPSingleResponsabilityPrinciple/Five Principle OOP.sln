@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FivePrincipleOOPSingleRespo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FivePrincipleOOPOpenClosePrinciple", "..\FivePrincipleOOPOpenClosePrinciple\FivePrincipleOOPOpenClosePrinciple.csproj", "{778A2F36-350A-4A5E-BD72-C87A28D80FAC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "..\UnitTestProject\UnitTestProject.csproj", "{970CB339-56B4-4949-BA26-A70745146D8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{778A2F36-350A-4A5E-BD72-C87A28D80FAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{778A2F36-350A-4A5E-BD72-C87A28D80FAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{778A2F36-350A-4A5E-BD72-C87A28D80FAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{970CB339-56B4-4949-BA26-A70745146D8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{970CB339-56B4-4949-BA26-A70745146D8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{970CB339-56B4-4949-BA26-A70745146D8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{970CB339-56B4-4949-BA26-A70745146D8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

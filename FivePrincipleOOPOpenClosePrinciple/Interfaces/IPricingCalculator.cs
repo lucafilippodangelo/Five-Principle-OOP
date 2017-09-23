@@ -1,7 +1,4 @@
-﻿using FivePrincipleOOP.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using FivePrincipleOOPOpenClosePrinciple.Models;
 
 namespace FivePrincipleOOPOpenClosePrinciple.Interfaces
 {

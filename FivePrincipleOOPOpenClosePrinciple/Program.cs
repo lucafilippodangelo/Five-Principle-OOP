@@ -12,7 +12,7 @@ namespace FivePrincipleOOPOpenClosePrinciple
             Console.WriteLine("Hello World!");
 
             Cart carrello = new Cart();
-            carrello.Add(new FivePrincipleOOP.Models.OrderItem() { Quantity = 500, Sku = "WEIGHT_PEANUTS" });
+            carrello.Add(new OrderItem() { Quantity = 500, Sku = "WEIGHT_PEANUTS" });
             var luca= carrello.TotalAmount();
         }
     }

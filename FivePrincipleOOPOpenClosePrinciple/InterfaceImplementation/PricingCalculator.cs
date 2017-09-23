@@ -1,8 +1,9 @@
 ﻿using FivePrincipleOOPOpenClosePrinciple.Interfaces;
-using FivePrincipleOOP.Models;
+using FivePrincipleOOPOpenClosePrinciple.Models;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using System;
 
 namespace FivePrincipleOOPOpenClosePrinciple.InterfaceImplementation
 {
@@ -19,6 +20,8 @@ namespace FivePrincipleOOPOpenClosePrinciple.InterfaceImplementation
             _pricingRules.Add(new SpecialPriceRule());
             _pricingRules.Add(new Buy4GetOneFree());
         }
+
+
 
         public decimal CalculatePrice(OrderItem item)
         {

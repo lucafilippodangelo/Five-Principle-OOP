@@ -1,5 +1,5 @@
-﻿using FivePrincipleOOP.Models;
-using FivePrincipleOOPOpenClosePrinciple.Interfaces;
+﻿using FivePrincipleOOPOpenClosePrinciple.Interfaces;
+using FivePrincipleOOPOpenClosePrinciple.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
