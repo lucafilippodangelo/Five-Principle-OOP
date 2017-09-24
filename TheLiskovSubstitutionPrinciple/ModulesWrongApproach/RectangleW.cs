@@ -4,16 +4,10 @@ using System.Text;
 
 namespace TheLiskovSubstitutionPrinciple.ModulesWrongApproach
 {
-    public class RectangleW : ShapeW
+    //LD STEP4
+    public class RectangleW
     {
-        public int Height { get; set; }
-        public int Width { get; set; }
-
-        public RectangleW(){ }
-
-        public override int Area()
-        {
-            return Height * Width;
-        }
+        public virtual int Height { get; set; }
+        public virtual int Width { get; set; }
     }
 }

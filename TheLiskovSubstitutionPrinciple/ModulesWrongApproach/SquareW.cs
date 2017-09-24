@@ -4,13 +4,25 @@ using System.Text;
 
 namespace TheLiskovSubstitutionPrinciple.ModulesWrongApproach
 {
-    public class SquareW : ShapeW
+    //LD STEP5
+    public class SquareW : RectangleW
     {
-        public int SideLength;
-
-        public override int Area()
+        public override int Height
         {
-            return SideLength * SideLength;
+            get => base.Height;
+            set {  base.Height = value;
+                   base.Width = value;
+            }
+        }
+
+        public override int Width
+        {
+            get => base.Width;
+            set
+            {
+                base.Width = value;
+                base.Height = value;
+            }
         }
     }
 }

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TheLiskovSubstitutionPrinciple.ModulesWrongApproach
+namespace TheLiskovSubstitutionPrinciple.ModulesRightApproach
 {
-    public abstract class ShapeW
+    public abstract class Shape
     {
         public abstract int Area();
     }

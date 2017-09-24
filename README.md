@@ -128,4 +128,77 @@ There are comments In the code starting from the “Cart.cs” class:
 This princple says that subtypes must be substitutable for their base types. The child class should not:
 - remove base class behaviour
 - violate base class invariants(behaviour that doesn't change defined by contract sometimes)
+- tip: when the substitution principle is violated, a good approach is refactor to a new base class
 
+TELL DON'T ASK APPROACH: all the logic should be inside the specific object, the trick is demanding by asking what to do
+
+In the example we are going to manage the calculation of a "Square" and of a "Rectangle".
+
+WRONG IMPLEMENTATION
+
+Class Rectangle //LD STEP4
+```
+    public class RectangleW
+    {
+        public virtual int Height { get; set; }
+        public virtual int Width { get; set; }
+    }
+```
+
+Class Square //LD STEP5
+```
+    public class RectangleW
+    {
+        public virtual int Height { get; set; }
+        public virtual int Width { get; set; }
+    }
+```
+
+Method AreaCalculator //LD STEP6
+```
+    public class AreaCalculatorW
+    {
+        public static int CalculateArea(RectangleW r)
+        {
+            return r.Height * r.Width;
+        }
+
+        public static int CalculateArea(SquareW s)
+        {
+            return s.Height * s.Height;
+        }
+    }
+```
+
+Unit Tests //LD STEP7
+```
+ [TestMethod]
+        public void SixFor2X3Rectangle()
+        {
+            var myRectangle = new RectangleW { Height = 2, Width = 3 };
+            Assert.AreEqual(6, AreaCalculatorW.CalculateArea(myRectangle));
+        }
+       
+        [TestMethod]
+        public void NineFor3X3Square()
+        {
+            var mySquare = new SquareW() { Height = 3 };
+            Assert.AreEqual(9, AreaCalculatorW.CalculateArea(mySquare));
+        }
+
+        //LD I expect this test to fail
+        [TestMethod]
+        public void TwentyFor4X5RectangleFromSquare()
+        {
+            RectangleW newRectangle = new SquareW();
+            newRectangle.Width = 4;
+            newRectangle.Height = 5;
+            Assert.AreEqual(20, AreaCalculatorW.CalculateArea(newRectangle));
+        }
+```
+
+The last UT shows that a child class item change the behaviour of the parent one, for a rectangle I expect an area of 25, not 20 
+
+RIGHT IMPLEMENTATION
+
+the right implementation correct the logical issue by defining a base class and in the same time use the principle "Tell don't ask", we will not have anymore the "CalculateArea" method.
