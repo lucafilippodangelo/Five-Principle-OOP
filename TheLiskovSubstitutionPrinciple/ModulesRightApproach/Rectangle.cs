@@ -4,14 +4,16 @@ using System.Text;
 
 namespace TheLiskovSubstitutionPrinciple.ModulesRightApproach
 {
-    class Rectangle
+    //LD STEP9
+    public class Rectangle : Shape
     {
         public int Height { get; set; }
         public int Width { get; set; }
 
-        //public RectangleW() { }
-
-
+        public override int Area()
+        {
+            return Height * Width;
+        }
     }
 
 }

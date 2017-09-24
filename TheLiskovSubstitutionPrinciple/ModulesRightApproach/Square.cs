@@ -4,11 +4,14 @@ using System.Text;
 
 namespace TheLiskovSubstitutionPrinciple.ModulesRightApproach
 {
-    public abstract class Square
+    //LD STEP8
+    public class Square : Shape
     {
-        //public override int Area()
-        //{
-        //    return SideLength * SideLength;
-        //}
+        public int SideLength;
+
+        public override int Area()
+        {
+            return SideLength * SideLength;
+        }
     }
 }

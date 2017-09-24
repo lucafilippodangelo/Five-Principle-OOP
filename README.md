@@ -198,7 +198,58 @@ Unit Tests //LD STEP7
 ```
 
 The last UT shows that a child class item change the behaviour of the parent one, for a rectangle I expect an area of 25, not 20 
+So the "square" subtype is not substituible to the "rectangle" 
+
+A "smell" that the liskov principle is violated is when 
+- "tell don't ask" is not present
+- a class is not implementing all the methods of an interface
 
 RIGHT IMPLEMENTATION
 
-the right implementation correct the logical issue by defining a base class and in the same time use the principle "Tell don't ask", we will not have anymore the "CalculateArea" method.
+The right implementation correct the logical issue by defining a base class and in the same time use the principle "Tell don't ask", we will not have anymore the "CalculateArea" method but will move all the behaviour of the object inside it, 
+both the "rectangle" and "square" will inherit from the base class.
+
+```
+    //LD STEP8
+    public class Square : Shape
+    {
+        public int SideLength;
+
+        public override int Area()
+        {
+            return SideLength * SideLength;
+        }
+    }
+
+	//LD STEP9
+    public class Rectangle : Shape
+    {
+        public int Height { get; set; }
+        public int Width { get; set; }
+
+        public override int Area()
+        {
+            return Height * Width;
+        }
+    }
+
+	//LD STEP10
+	 [TestMethod]
+        public void TwentyFor4X5ShapeFromRectangleAnd9For3X3Square()
+        {
+            var shapes = new List<Shape>
+                             {
+                                 new Rectangle {Height = 4, Width = 5},
+                                 new Square {SideLength = 3}
+                             };
+            var areas = new List<int>();
+            foreach (Shape shape in shapes)
+            {
+                areas.Add(shape.Area());
+            }
+            Assert.AreEqual(20, areas[0]);
+            Assert.AreEqual(9, areas[1]);
+        }
+```
+
+## THE INTERFACE SEGREGATION PRINCIPLE ##
