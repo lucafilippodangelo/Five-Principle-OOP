@@ -275,3 +275,37 @@ effort spent to apply it during the design time and increase the complexity of c
 flexible design. If we are going to apply it more than is necessary it will result a code containing a 
 lot of interfaces with single methods, so applying should be done based on experience and common sense 
 in identifying the areas where extension of code are more likely to happens in the future." (http://www.oodesign.com/interface-segregation-principle.html)
+
+## THE DEPENDENCY INVERSION PRINCIPLE ##
+
+Definition of "Dependency Inversion Principle"
+- high level module should not depend on low level module. Both should depend on abstraction
+- abstraction should not depend on details, details should depend on abstraction
+
+The principle is that code should depend on abstraction. So class-A depend not on class-B but on an interface, 
+class-B will depend on the interface as well, by depending on abstraction we are decoupling the implementation from each other.
+
+Definition of "Injected Dependencies":
+when class-A depend from class-B, e.g. a model class depend from a database class.
+the dependency is pushed from class-B to class-A
+the meaning is that I should not create the dependency as usual by using the "new" word inside the constructor of of class-A, instead pass a reference of the class-B as a parameter in the constructor of the class-A
+
+For instance all the things that we depend of but that time by time can change, and when change we must recompile the code. For this reason could be convenient inject it. For instance:
+- framework
+- third part libraries
+- DATABASE!!!!
+- web service
+- configuration
+- the "new()" keyword
+- "static" methods
+- Introduction to the principle:
+
+When this principle is applied it means the high level classes are not working directly with low level classes, 
+they are using interfaces as an abstract layer. In this case instantiation of new low level objects inside 
+the high level classes(if necessary) can not be done using the operator new. Instead, some of the Creational 
+design patterns can be used, such as Factory Method, Abstract Factory, Prototype.
+
+The Template Design Pattern is an example where the DIP principle is applied.
+
+Dependency injection widely used in(repository pattern):
+https://github.com/lucafilippodangelo/ASP.NET-Core-Implementing-and-Securing-an-API
