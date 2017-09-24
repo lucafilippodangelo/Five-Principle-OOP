@@ -32,8 +32,7 @@ public class Order
 
         public void ChargeCard(PaymentDetails paymentDetails, Cart cart) {}
 ```
-
-- The Class Order
+To resume, the Class Order:
   - Has method “Checkout” that under condition call 
     - The method “Charge card”
     - The method “Reserve Inventory”
@@ -41,6 +40,7 @@ public class Order
 
 
 RIGHT APPROACH - FIRST STEP
+
 It’s clear that the class “Order” is managing actions/logic related with other entities. 
 I will convert the methods in separated interfaces that give services and specialized classes will implement them. The classes are responsible to manipulate the specific instance, because depend on the type of order I need or not of that specific implementation.
 - NotificationService : INotificationService 
@@ -253,3 +253,25 @@ both the "rectangle" and "square" will inherit from the base class.
 ```
 
 ## THE INTERFACE SEGREGATION PRINCIPLE ##
+
+The purpose is to have an application with less dependencies, by avoiding fat interfaces.
+
+Definition: clients should not be forced to depend on methods they do not use, so implement interfaces they don't use entirely.
+
+Some smells: 
+- partially implemented interfaces(because of the liskov principle, if we don't implement all the methods of the interface, could be impossible substitute a class with the parent one, because it doesn't implement all the method functionalities expected.) 
+- when a client references a class but just use a small portion of it.
+
+How to fix:
+- Create a smaller interface with just what I need, then
+- If I depend on a fat interface I own
+  - Have the fat interface implement my new interface
+  - Reference the new interface with my code
+- If I depend on a fat interface I don't own
+  - Implement this interface using an Adapter that implements the full interface
+
+"Like every principle Interface Segregation Principle is one principle which require additional time and 
+effort spent to apply it during the design time and increase the complexity of code. But it produce a 
+flexible design. If we are going to apply it more than is necessary it will result a code containing a 
+lot of interfaces with single methods, so applying should be done based on experience and common sense 
+in identifying the areas where extension of code are more likely to happens in the future." (http://www.oodesign.com/interface-segregation-principle.html)
